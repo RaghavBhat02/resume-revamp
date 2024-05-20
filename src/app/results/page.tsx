@@ -4,30 +4,6 @@ import { Inter } from 'next/font/google'
 import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 import { useMemo, useState } from 'react'
-const results: {rank: number, company: string, title: string, points: string[], rating: number}[] = [
-    {
-        rank: 1,
-        company: "Google",
-        rating: 0.9,
-        title: "Programming Language Designer",
-        points: [
-            "Designed the Pattern Matching Algorithm in Google's new Carbon Language.",
-            "Optimized language parsing, increasing compile-time by 35%.",
-            "Used cryptography to design and implement an automatic waitlist that moved users through the queue on it's own."
-        ]
-    },
-    {
-        rank: 2,
-        rating: 0.7,
-        company: "Bhakti Origins",
-        title: "Full Stack Developer",
-        points: [
-            "Migrated API from servers to edge functions, increasing up time by 12%.",
-            "Created a random profile picture generator using deep learning models such as Stable Diffusion and LLMs like OpenAI's Davinci.",
-            "Enhanced type-system usability by simplifying generics and templating- allows 20% more new users to pick up the language."
-        ]
-    }
-]
 
 function Rank({rank, company, title, points, rating, reason}: {rank: number, company: string, title: string, points: string[], rating: number, reason: string}) {
     const [mouseOver, setMouseOver ] = useState(false);
